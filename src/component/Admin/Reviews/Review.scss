@@ -1,0 +1,46 @@
+.review {
+  display: flex;
+
+  .reviewListContainer {
+    flex: 6;
+
+    .dataTable {
+      padding: 0.3rem 1rem;
+
+      form {
+        max-width: 500px;
+        display: flex;
+        gap: 30px;
+        margin: 0.5rem 0;
+        align-items: center;
+        justify-content: space-between;
+        .item {
+          display: flex;
+          max-width: 400px;
+          flex-direction: row;
+          align-items: center;
+          border: 1px solid lightgray;
+          padding: 0.5rem 0.6rem;
+          position: relative;
+          .icon {
+            color: gray;
+            position: absolute;
+            left: 0.5rem;
+            top: 0.4rem;
+            font-size: 1.4rem;
+          }
+          input,
+          textarea,
+          select {
+            border: none;
+            outline: none;
+            margin: 0 0 0.2rem 0.7rem;
+            font-weight: 300;
+            font-size: 0.9rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

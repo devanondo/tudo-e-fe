@@ -1,0 +1,121 @@
+.about {
+  padding: 50px 0;
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .content {
+      text-align: left;
+      .sub_title {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      p {
+        text-align: left;
+        font-style: justify;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .flex_reverse {
+    flex-direction: row-reverse;
+  }
+
+  .grid {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 30px;
+      gap: 10px;
+      background: white;
+      border-radius: 5px;
+      border: 1px solid white;
+      box-shadow: 0 16px 32px 0 rgb(0 0 0 / 4%);
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid rgb(255, 76, 225);
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  .slider {
+    padding: 50px 0;
+
+    .swiper {
+      padding: 80px 0;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.162);
+
+        &::after {
+          font-size: 15px;
+          font-weight: 700;
+          color: #000;
+        }
+      }
+      .swiper-button-next {
+        top: 35px;
+      }
+      .swiper-button-prev {
+        right: 80px;
+        top: 35px;
+        left: auto;
+      }
+    }
+    .team_card {
+      max-width: 250px;
+      cursor: pointer;
+      margin: 0 auto;
+
+      .img_wrapper {
+        max-height: 285px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-bottom: 5px;
+
+        img {
+          width: 100%;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          img {
+            scale: 1.1;
+          }
+        }
+      }
+      .designation {
+        font-size: 15px;
+      }
+      .name {
+        font-family: 18px;
+      }
+    }
+  }
+}

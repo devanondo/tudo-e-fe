@@ -1,0 +1,39 @@
+.searchBox {
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.271);
+  align-items: center;
+  padding: 5px 10px;
+  gap: 5px;
+
+  input {
+    border: none;
+    outline: none;
+    padding: 0 5px;
+  }
+
+  button {
+    font-size: 15px;
+    background: transparent;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: gray;
+    padding: 0 20px;
+    border-radius: 3px;
+
+    svg {
+      width: 25px;
+    }
+
+    &:hover {
+      color: green;
+    }
+    &:active {
+      background: rgba(15, 128, 0, 0.281);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.orderDetails {
+  .orderDetailsPage {
+    display: flex;
+    gap: 20px;
+
+    h2 {
+      font-size: 1rem;
+      margin: 1rem 0;
+      color: rgba(12, 11, 27, 0.5);
+    }
+
+    .orderDetailsContainer {
+      flex: 1;
+      padding: 0 1rem;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+
+      .orderDetailsContainerBox {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          text-align: left;
+          font-size: 0.9rem;
+          font-weight: 700;
+
+          span {
+            font-weight: 500;
+            font-size: 0.8rem;
+            margin-left: 0.3rem;
+          }
+        }
+      }
+    }
+    .orderDetailsCartItems {
+      flex: 2;
+      padding: 0 1rem;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+
+      .orderDetailsCartItemsContainer {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          display: flex;
+          margin: 0.3rem 0;
+          overflow: hidden;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.9rem;
+
+          div {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .orderDetailsPage {
+    flex-direction: column;
+  }
+}
