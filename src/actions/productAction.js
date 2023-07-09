@@ -37,7 +37,7 @@ import {
     UPDATE_PRODUCT_REQUEST,
     UPDATE_PRODUCT_SUCCESS,
 } from '../constants/productConstants';
-import { apiInstance } from '../utils/apiInstance';
+import apiInstance from '../utils/apiInstance';
 
 export const getProduct =
     (keyword = '', currentPage, price = [0, 3000000], category) =>

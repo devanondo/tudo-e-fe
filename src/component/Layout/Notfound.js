@@ -1,7 +1,7 @@
-import "./Notfound.scss";
+import './Notfound.scss';
 
 const Notfound = () => {
-  return <div>Notfound</div>;
+    return <div>Notfound</div>;
 };
 
 export default Notfound;

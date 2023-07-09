@@ -19,7 +19,7 @@ import {
     UPDATE_ORDER_REQUEST,
     UPDATE_ORDER_SUCCESS,
 } from '../constants/orderConstants.js';
-import { apiInstance } from '../utils/apiInstance.js';
+import apiInstance from '../utils/apiInstance.js';
 
 //Create orders
 export const createOrder = (order) => async (dispatch) => {

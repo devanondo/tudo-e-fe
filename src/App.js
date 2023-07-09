@@ -35,7 +35,7 @@ import Register from './component/user/Register';
 import UpdatePassword from './component/user/UpdatePassword';
 import UpdateProfile from './component/user/UpdateProfile';
 import store from './store';
-import { apiInstance } from './utils/apiInstance';
+import apiInstance from './utils/apiInstance';
 
 function App() {
     const [stripeApiKey, setStripeApiKey] = useState('');

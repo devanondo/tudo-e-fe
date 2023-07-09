@@ -1,4 +1,5 @@
 import { CLEAR_ERROR } from '../constants/productConstants';
+import Cookies from 'js-cookie';
 import {
     ALL_USER_FAIL,
     ALL_USER_REQUEST,
@@ -30,7 +31,7 @@ import {
     USER_DETAILS_REQUEST,
     USER_DETAILS_SUCCESS,
 } from '../constants/userConstants';
-import { apiInstance } from '../utils/apiInstance';
+import apiInstance from '../utils/apiInstance';
 
 //Login actions
 export const login = (email, password) => async (dispatch) => {
@@ -39,6 +40,8 @@ export const login = (email, password) => async (dispatch) => {
         const config = { headers: { 'Content-Type': 'application/json' } };
 
         const { data } = await apiInstance.post('login', { email, password }, config);
+        Cookies.set('tudo__coo__kie', data?.token, { expires: 90 });
+        console.log(data);
         dispatch({ type: LOGIN_SUCCESS, payload: data.user });
     } catch (error) {
         dispatch({
