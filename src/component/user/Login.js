@@ -35,6 +35,7 @@ function Login() {
         }
         if (isAuthenticated) {
             navigate(redirect);
+            window.location.reload();
         }
     }, [error, dispatch, isAuthenticated, alert, navigate, redirect]);
 
