@@ -1,7 +1,7 @@
 import { Container } from '@mui/material';
-import React, { useEffect } from 'react';
+import Cookies from 'js-cookie';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { logout } from '../../actions/userAction';
 import Footer from '../Layout/Header/Footer';
 import Header from '../Layout/Header/Header';
@@ -12,17 +12,18 @@ import './Profile.scss';
 import ProfileSidebar from './ProfileSidebar';
 
 const Profile = () => {
-    const { user, loading, isAuthenticated } = useSelector((state) => state.user);
-    const navigate = useNavigate();
+    const { user, loading } = useSelector((state) => state.user);
+
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        if (!isAuthenticated) {
-            navigate(`/login`);
-        }
-    }, [navigate, isAuthenticated]);
+    // useEffect(() => {
+    //     if (!isAuthenticated) {
+    //         navigate(`/login`);
+    //     }
+    // }, [navigate, isAuthenticated]);
     const handleLogout = () => {
         dispatch(logout());
+        Cookies.remove('tudo__coo__kie');
         alert.success('Logout successfully');
     };
 

@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logout } from '../../../actions/userAction';
 import './AccountMenu.css';
+import Cookies from 'js-cookie';
 
 export default function AccountMenu() {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -32,7 +33,9 @@ export default function AccountMenu() {
     };
     const handleLogout = () => {
         dispatch(logout());
+        Cookies.remove('tudo__coo__kie');
         alert.success('Logout successfully');
+        window.location.reload();
     };
     return (
         <React.Fragment>

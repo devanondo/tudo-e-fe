@@ -4,7 +4,7 @@ import { CircularProgress, Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useAlert } from 'react-alert';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { clearError, login } from '../../actions/userAction';
 import Footer from '../Layout/Header/Footer';
 import Header from '../Layout/Header/Header';
@@ -18,7 +18,6 @@ function Login() {
     const dispatch = useDispatch();
     const alert = useAlert();
     let navigate = useNavigate();
-    let location = useLocation();
 
     const { loading, error, isAuthenticated } = useSelector((state) => state.user);
 
@@ -27,7 +26,7 @@ function Login() {
         dispatch(login(loginEmail, loginPassword));
     };
 
-    const redirect = location.search ? location.search.split('=')[1] : '/account';
+    const redirect = '/account';
     useEffect(() => {
         if (error) {
             alert.error(error);
